@@ -22,7 +22,6 @@ public class Main {
         */
 
 
-
         /* zad.2
         a) stworzyć dowolny przykład z NullPonterException,
         b) stworzyć dowolny przykład z ArithmeticException ,
