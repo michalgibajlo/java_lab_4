@@ -32,5 +32,9 @@ public class Main {
         d) sprawdzić czy idzie wywołać z obu instancji objektu (deklaracja z interfejsu i z klasy)
         metodę której nie ma zadeklarowane w interfejsie Budynek, ale jest dopisana w klassie Dom,
         */
+        Dom d1 = new Dom(40.00, 20.00, 6.00, "Warszawa", "Grochowska", "357", "91", "03-822", 5, 2, Budynek.KolorEnum.niebieski);
+        Budynek d2 = new Dom(20.15, 12.00, 80.00, "Gdańsk", "Obrońców Wybrzeża", "20", "1", "80-398", 5,2, Budynek.KolorEnum.czerwony);
+        System.out.println(d1.toString());
+        System.out.println(d2.toString());
     }
 }

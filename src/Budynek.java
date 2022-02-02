@@ -13,13 +13,13 @@
 
 interface Budynek {
     double powierzchnia (double powBudynku, double powPodworka, double powParkingu);
-    String adresBudynku(String miejscowosc, String ulica, int nrDomu, String nrLokalu, String kodPocztowy);
+    String adresBudynku(String miejscowosc, String ulica, String nrDomu, String nrLokalu, String kodPocztowy);
     void liczbaOkien(int valueO); // użycie jak setter
     void liczbaMieszkancow(int valueM); // użycie jak setter
     void kolorDomu(KolorEnum kolor); // użycie jak setter
-    //double wyliczCene(double powierzchnia, double cena);
-    //void stanDomu (StanEnum stan);
-    //void ekspozycjaOkien (EkspozycjaEnum ekspozycja);
+    double wyliczCene(double powierzchnia, double cena);
+    void stanDomu (StanEnum stan);
+    void ekspozycjaOkien (EkspozycjaEnum ekspozycja);
 
 
 
