@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
 
 public class Main {
 
@@ -20,6 +23,41 @@ public class Main {
            boolean isIndexCorrect
            white(!isIndexCorrect) {}
         */
+
+        int[] tab = {1, 2, 3, 4, 5, 6};
+        Scanner scan = new Scanner(System.in);
+        boolean indexcheck = false;
+
+        System.out.println("Wprowadź numer indeksu tabeli (0-5): ");
+        int i;
+
+        try
+        {
+            while (indexcheck==false) {
+
+                try {
+                    i = scan.nextInt();
+                    if (i >= 0 && i <= 5) {
+                        System.out.println(tab[i]);
+                        indexcheck = true;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Błąd, podaj cyfrę!");
+                    throw e;
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println("Błąd, podałeś liczbę spoza zakresu. Obsługiwane są liczby od 0 do " + (tab.length - 1));
+                }
+            }
+        }
+        finally
+        {
+            System.out.println("Kończenie pracy programu");
+        }
+
+
+
+
+
 
 
         /* zad.2
