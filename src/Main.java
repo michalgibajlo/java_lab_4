@@ -31,9 +31,8 @@ public class Main {
         System.out.println("Wprowadź numer indeksu tabeli (0-5): ");
         int i;
 
-        try
-        {
-            while (indexcheck==false) {
+        try {
+            while (indexcheck == false) {
 
                 try {
                     i = scan.nextInt();
@@ -48,9 +47,7 @@ public class Main {
                     System.out.println("Błąd, podałeś liczbę spoza zakresu. Obsługiwane są liczby od 0 do " + (tab.length - 1));
                 }
             }
-        }
-        finally
-        {
+        } finally {
             System.out.println("Kończenie pracy programu");
         }
 
@@ -66,5 +63,37 @@ public class Main {
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
 
+        //A
+
+        String x=null;
+
+        try {
+            if (x.equals(""))
+                System.out.println(x);
+
+        } catch (NullPointerException e) {
+            System.out.println("null");
+            throw e;
+        }
+
+        //B i C
+
+        System.out.println("\nPodaj 2 liczby do podzielenia");
+
+        try {
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            int dzielenieprzezzero = a/b;
+            System.out.println(dzielenieprzezzero);
+        } catch (NullPointerException e) {
+            System.out.println("Nie wprowadzono wartości");
+            throw e;
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException " + e.getMessage());
+        } catch (Exception n) {
+            System.out.println("Inny błąd.");
+        } finally {
+            System.out.println("Dziękuję, do widzenia");
+        }
     }
 }
